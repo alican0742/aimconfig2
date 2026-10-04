@@ -4,16 +4,53 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AimConfig</title>
+
 <style>
-body{margin:0;background:#0b0d12;color:white;font-family:Arial;text-align:center}
-header{padding:25px;background:#151923}
-h1{color:#ffd21c}
-section{padding:30px 15px}
-.card{background:#151923;padding:20px;margin:15px auto;border-radius:12px;max-width:400px}
-button{background:#ffd21c;border:0;padding:12px 20px;border-radius:8px;font-weight:bold}
-p{color:#bbb}
+body{
+margin:0;
+background:#0b0d12;
+color:white;
+font-family:Arial;
+text-align:center
+}
+header{
+padding:25px;
+background:#151923
+}
+h1{
+color:#ffd21c
+}
+section{
+padding:30px 15px
+}
+.card{
+background:#151923;
+padding:20px;
+margin:15px auto;
+border-radius:12px;
+max-width:400px
+}
+button{
+background:#ffd21c;
+border:0;
+padding:12px 20px;
+border-radius:8px;
+font-weight:bold
+}
+p{
+color:#bbb
+}
+#hassasiyet{
+display:none;
+background:#151923;
+padding:20px;
+margin:20px auto;
+max-width:400px;
+border-radius:12px
+}
 </style>
 </head>
+
 <body>
 
 <header>
@@ -22,6 +59,7 @@ p{color:#bbb}
 </header>
 
 <section>
+
 <h2>🎮 Ayarlarını Bul</h2>
 
 <div class="card">
@@ -39,18 +77,22 @@ p{color:#bbb}
 <div class="card">
 <h3>🎮 HUD Ayarları</h3>
 <p>2, 3 ve 4 parmak kontrol düzenleri.</p>
-<<button onclick="hassasiyetGoster()">İncele</button>
+<button>İncele</button>
 </div>
 
 </section>
 
-<footer>
-<p>© 2026 AimConfig</p>
-</footer>
+<div id="hassasiyet">
+<h2>🎯 Hassasiyet Ayarları</h2>
+<p>Kamera: 120</p>
+<p>ADS: 100</p>
+<p>Red Dot: 45</p>
+<p>2x: 35</p>
+<p>4x: 20</p>
+</div>
 
-</body>
-</html><!-- AimConfig cihaz ayarları -->
-<section style="padding:30px;text-align:center;background:#10141c;color:white">
+<section style="background:#10141c">
+
 <h2>📱 Cihazına Özel Ayar</h2>
 
 <select id="telefon" style="padding:12px;border-radius:8px">
@@ -62,9 +104,19 @@ p{color:#bbb}
 </select>
 
 <div id="sonuc" style="margin-top:20px"></div>
+
 </section>
 
+<footer>
+<p>© 2026 AimConfig</p>
+</footer>
+
 <script>
+
+function hassasiyetGoster(){
+document.getElementById("hassasiyet").style.display="block";
+}
+
 document.getElementById("telefon").addEventListener("change",function(){
 
 let sonuc=document.getElementById("sonuc");
@@ -86,18 +138,8 @@ sonuc.innerHTML="<h3>Samsung Galaxy</h3><p>🎯 Kamera: 110</p><p>🔫 ADS: 95</
 }
 
 });
-</script>
-<div id="hassasiyet" style="display:none">
-<h2>🎯 Hassasiyet Ayarları</h2>
-<p>Kamera: 120</p>
-<p>ADS: 100</p>
-<p>Red Dot: 45</p>
-<p>2x: 35</p>
-<p>4x: 20</p>
-</div>
 
-<script>
-function hassasiyetGoster(){
-document.getElementById("hassasiyet").style.display="block";
-}
 </script>
+
+</body>
+</html>
