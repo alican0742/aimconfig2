@@ -39,7 +39,7 @@ p{color:#bbb}
 <div class="card">
 <h3>🎮 HUD Ayarları</h3>
 <p>2, 3 ve 4 parmak kontrol düzenleri.</p>
-<button>İncele</button>
+<<button onclick="hassasiyetGoster()">İncele</button>
 </div>
 
 </section>
@@ -86,4 +86,18 @@ sonuc.innerHTML="<h3>Samsung Galaxy</h3><p>🎯 Kamera: 110</p><p>🔫 ADS: 95</
 }
 
 });
+</script>
+<div id="hassasiyet" style="display:none">
+<h2>🎯 Hassasiyet Ayarları</h2>
+<p>Kamera: 120</p>
+<p>ADS: 100</p>
+<p>Red Dot: 45</p>
+<p>2x: 35</p>
+<p>4x: 20</p>
+</div>
+
+<script>
+function hassasiyetGoster(){
+document.getElementById("hassasiyet").style.display="block";
+}
 </script>
