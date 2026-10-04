@@ -49,4 +49,41 @@ p{color:#bbb}
 </footer>
 
 </body>
-</html>
+</html><!-- AimConfig cihaz ayarları -->
+<section style="padding:30px;text-align:center;background:#10141c;color:white">
+<h2>📱 Cihazına Özel Ayar</h2>
+
+<select id="telefon" style="padding:12px;border-radius:8px">
+<option value="">Telefonunu seç</option>
+<option value="redmi">Redmi Note 15 Pro 5G</option>
+<option value="poco">Poco X6</option>
+<option value="iphone">iPhone 15</option>
+<option value="samsung">Samsung Galaxy</option>
+</select>
+
+<div id="sonuc" style="margin-top:20px"></div>
+</section>
+
+<script>
+document.getElementById("telefon").addEventListener("change",function(){
+
+let sonuc=document.getElementById("sonuc");
+
+if(this.value==="redmi"){
+sonuc.innerHTML="<h3>Redmi Note 15 Pro 5G</h3><p>🎯 Kamera: 120</p><p>🔫 ADS: 100</p><p>📱 Jiroskop: 300</p>";
+}
+
+if(this.value==="poco"){
+sonuc.innerHTML="<h3>Poco X6</h3><p>🎯 Kamera: 115</p><p>🔫 ADS: 95</p><p>📱 Jiroskop: 300</p>";
+}
+
+if(this.value==="iphone"){
+sonuc.innerHTML="<h3>iPhone 15</h3><p>🎯 Kamera: 110</p><p>🔫 ADS: 90</p><p>📱 Jiroskop: 300</p>";
+}
+
+if(this.value==="samsung"){
+sonuc.innerHTML="<h3>Samsung Galaxy</h3><p>🎯 Kamera: 110</p><p>🔫 ADS: 95</p><p>📱 Jiroskop: 300</p>";
+}
+
+});
+</script>
